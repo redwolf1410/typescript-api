@@ -1,7 +1,7 @@
 import { tsBooleanKeyword } from "@babel/types";
 import { Application, Request, Response } from "express";
 import CoursesData from "../../data/courses.json";
-import DeviceModel,  {Device} from "../models/Devices";
+import DeviceModel,  {Device} from "../models/Device";
 class DeviceController{
   public async index(req: Request, res: Response): Promise<void> {
     const devices: Device[] = await DeviceModel.find({});

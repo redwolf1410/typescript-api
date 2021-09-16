@@ -6,6 +6,7 @@ import cors from 'cors';
 import exphbs from "express-handlebars";
 import IndexRoutes from './routes/index'
 import DeviceRoutes from './routes/device'
+import UserRoutes from './routes/user'
 // Create Express server
 const app = express();
 import './database';
@@ -29,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Routes
 app.use('/devices',DeviceRoutes)
+app.use('/users',UserRoutes)
 app.use(IndexRoutes)
 // static files
 app.use(
